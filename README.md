@@ -18,10 +18,10 @@ Aplicação web (single page app) para realização da copa do mundo de filmes.
 
 A aplicação foi desenvolvida em javascript, utilizando :
 - [React](https://pt-br.reactjs.org/) ( [Hooks](https://react-redux.js.org/next/api/hooks) e [Redux](https://github.com/reduxjs/redux-thunk) )
-- [customize-cra](https://github.com/arackaf/customize-cra)
 - [Material UI](https://material-ui.com/pt/)
 - [Jest](https://jestjs.io/docs/en/tutorial-react)
-- [Arquitetura](https://www.treinaweb.com.br/blog/flux-descubra-o-motivo-do-sucesso-dessa-arquitetura-em-grandes-empresas/) [Flux](https://www.treinaweb.com.br/blog/flux-descubra-o-motivo-do-sucesso-dessa-arquitetura-em-grandes-empresas/)
+- [Arquitetura](https://www.treinaweb.com.br/blog/flux-descubra-o-motivo-do-sucesso-dessa-arquitetura-em-grandes-empresas/) 
+- [Flux](https://www.treinaweb.com.br/blog/flux-descubra-o-motivo-do-sucesso-dessa-arquitetura-em-grandes-empresas/)
 
 
 
