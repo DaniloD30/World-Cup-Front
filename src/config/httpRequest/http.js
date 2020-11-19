@@ -6,7 +6,7 @@ let instance = null;
 const getInstance = () => {
   if (!instance) {
     instance = axios.create({
-      baseURL: "https://worldcupmovie.herokuapp.com/api/",
+      baseURL: process.env.REACT_APP_API_URL
     });
   }
 
