@@ -1,0 +1,14 @@
+.circularProgress {
+    position: absolute;
+    margin-top: 10%;
+    margin-left: 50%;
+    z-index: 19000;
+}
+.circularchildren {
+    opacity: 0.2;
+    pointer-events: none;
+}
+
+.disabledCircular {
+    display: none;
+}
