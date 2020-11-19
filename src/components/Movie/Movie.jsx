@@ -1,6 +1,6 @@
 import { Box, Checkbox, Paper, Snackbar, Typography } from "@material-ui/core";
 import MuiAlert from "@material-ui/lab/Alert";
-import React from "react";
+import React, { useEffect } from "react";
 import { useSelector } from "react-redux";
 function Alert(props) {
   return <MuiAlert elevation={6} variant="filled" {...props} />;
@@ -8,11 +8,19 @@ function Alert(props) {
 const MoviesList = (props) => {
   const { title, year, movie, handleList, handleDel } = props;
   const [checked, setChecked] = React.useState(false);
+  const [moviesLength, setLengthMovies] = React.useState(0);
   const [open, setOpen] = React.useState(false);
   const { movies } = useSelector((state) => state.movie);
+
+  useEffect(() => {
+    if (movies) {
+      setLengthMovies(movies);
+    }
+  }, [movies]);
+
   const handleChange = (event) => {
     if (event.target.checked) {
-      if (movies === 7) {
+      if (moviesLength === 8) {
         setOpen(true);
       } else {
         setChecked(event.target.checked);
