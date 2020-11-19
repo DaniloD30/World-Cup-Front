@@ -39,8 +39,6 @@ const generateChampionship = (
     .getWinner(values)
     .then((response) => {
       if (response) {
-        // Utils.setToken(response.data.Token);
-        // let jwt = jwtDecode(response.data.Token);
         callback();
         dispatch({
           type: Constants.WINNERS,

@@ -5,6 +5,7 @@ import { useDispatch, useSelector } from "react-redux";
 import Loading from "../../components/Loading/circularProgress";
 import movieAction from "../../actions/movieAction";
 import React, { useEffect } from "react";
+
 const MoviesList = (props) => {
   const { history } = props;
   const dispatch = useDispatch();
@@ -31,7 +32,7 @@ const MoviesList = (props) => {
     dispatch(
       movieAction.generateChampionship(movieList, "generateChampionship")
     );
-    dispatch(movieAction.saveLength(0), "saveLength");
+    dispatch(movieAction.saveLength(0));
     setMoviesList([]);
     history.push("/result");
   };
@@ -84,18 +85,27 @@ const MoviesList = (props) => {
             </Box>
           </Box>
           <Grid style={{ padding: "20px" }} container spacing={2}>
-            {movieArr?.map((item, index) => (
-              <Grid key={index} item xs={3}>
-                {/* <div key={item.id}>{item.titulo}</div> */}
-                <Movie
-                  title={item.titulo}
-                  year={item.ano}
-                  handleList={handleListSelectMovies}
-                  handleDel={handleDelete}
-                  movie={item}
-                />
+            {movieArr.length === 0 ? (
+              <Grid item xs={12}>
+                <Box style={{ display: "flex", justifyContent: "center" }}>
+                  <Typography variant="h5" style={{ color: "white" }}>
+                    Nenhum filme encontrado!
+                  </Typography>
+                </Box>
               </Grid>
-            ))}
+            ) : (
+              movieArr?.map((item, index) => (
+                <Grid key={index} item xs={3}>
+                  <Movie
+                    title={item.titulo}
+                    year={item.ano}
+                    handleList={handleListSelectMovies}
+                    handleDel={handleDelete}
+                    movie={item}
+                  />
+                </Grid>
+              ))
+            )}
           </Grid>
         </Paper>
       </Loading>
