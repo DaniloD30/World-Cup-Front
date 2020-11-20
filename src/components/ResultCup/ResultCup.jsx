@@ -32,9 +32,9 @@ const ResultCup = (props) => {
         </Button>
         <Grid container spacing={2}>
           {winners?.map((item, index) => (
-            <Grid item xs={12}>
+            <Grid key={index} item xs={12}>
               {/* <div key={item.id}>{item.titulo}</div> */}
-              <MovieResult ordem={index + 1} title={item.titulo} />
+              <MovieResult ordem={index + 1} title={item?.titulo} nota={item?.nota} />
 
               {/* <Movie key={item.id} movie={item} onClick={this.cardClicked} /> */}
             </Grid>

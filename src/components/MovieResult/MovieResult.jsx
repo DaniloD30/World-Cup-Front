@@ -2,13 +2,13 @@ import { Box, Paper, Typography } from "@material-ui/core";
 import React from "react";
 
 const MovieResult = (props) => {
-  const { ordem, title } = props;
+  const { ordem, title, nota } = props;
 
   return (
     <>
       <Paper
         style={{
-          height: "32px",
+          height: "55px",
           marginTop: "15px",
           display: "flex",
           alignItems: "center",
@@ -32,6 +32,14 @@ const MovieResult = (props) => {
             }}
           >
             {title}
+            <div
+              style={{
+                marginLeft: "15px",
+                fontSize: "14px",
+              }}
+            >
+              *Avaliação: {nota}
+            </div>
           </Typography>
         </Box>
       </Paper>
