@@ -1,6 +1,5 @@
 import http from "../config/httpRequest/http";
 export const getMovies = (id) => {
-  // ?pagina=1&itensPorPagina=10 Recurso
   return new Promise((resolve, reject) => {
     http
       .get(`movies`)
@@ -10,7 +9,6 @@ export const getMovies = (id) => {
 };
 
 export const getWinner = (movies) => {
-  // ?pagina=1&itensPorPagina=10 Recurso
   return new Promise((resolve, reject) => {
     http
       .post(`Championship`, movies)

@@ -3,7 +3,6 @@ import React, { Component } from "react";
 import "./Header.scss";
 export default class Header extends Component {
   render() {
-    //  const { id, titulo, ano } = this.props.movie description2
     return (
       <Paper
         style={{

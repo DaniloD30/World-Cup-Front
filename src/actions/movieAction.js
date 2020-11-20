@@ -11,8 +11,6 @@ const getMovies = (LOADING_IDENTIFICATOR = "", callback = () => {}) => (
     .getMovies()
     .then((response) => {
       if (response) {
-        // Utils.setToken(response.data.Token);
-        // let jwt = jwtDecode(response.data.Token);
         callback();
         dispatch({
           type: Constants.GET_ALL,

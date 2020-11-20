@@ -58,7 +58,6 @@ const MoviesList = (props) => {
           <Checkbox
             checked={checked}
             color="primary"
-            // disabled={movies < 8 ? false : true}
             onChange={handleChange}
             inputProps={{ "aria-label": "primary checkbox" }}
           />

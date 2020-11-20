@@ -1,6 +1,4 @@
 import axios from "axios";
-// import { addInterceptors } from './interceptors';
-
 let instance = null;
 
 const getInstance = () => {
