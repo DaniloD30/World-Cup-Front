@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`actions should working to store movieAction Dispatches the getMovies action and payload 1`] = `
+Array [
+  Object {
+    "loading": Object {
+      "identificatorTest": true,
+    },
+    "type": "UPDATE_LOADING",
+  },
+]
+`;

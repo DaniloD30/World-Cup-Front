@@ -10,7 +10,7 @@ const MoviesList = (props) => {
   const [checked, setChecked] = React.useState(false);
   const [moviesLength, setLengthMovies] = React.useState(0);
   const [open, setOpen] = React.useState(false);
-  const { movies } = useSelector((state) => state.movie);
+  const movies = useSelector((state) => state.movie?.movies);
 
   useEffect(() => {
     if (movies) {

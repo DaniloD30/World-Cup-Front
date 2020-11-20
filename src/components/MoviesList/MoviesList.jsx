@@ -10,13 +10,13 @@ const MoviesList = (props) => {
   const { history } = props;
   const dispatch = useDispatch();
   const [movieList, setMoviesList] = React.useState([]);
-  const { movieArr } = useSelector((state) => state.movie);
-  const { getMoviesLoading } = useSelector((state) => state.app.loading);
+  const  movieArr  = useSelector((state) => state.movie?.movieArr);
+  const  getMoviesLoading  = useSelector((state) => state.app?.loading?.getMoviesLoading);
 
   const handleListSelectMovies = (movie) => {
     const movieL = movieList.find((obj) => obj.id === movie.id);
     if (movieL === undefined) {
-      if (movieList.length < 8) {
+      if (movieList?.length < 8) {
         setMoviesList(movieList.concat(movie));
       }
     }
@@ -42,7 +42,7 @@ const MoviesList = (props) => {
   }, [dispatch]);
 
   useEffect(() => {
-    dispatch(movieAction.saveLength(movieList.length));
+    dispatch(movieAction.saveLength(movieList?.length));
   }, [dispatch, movieList]);
 
   return (
@@ -65,17 +65,17 @@ const MoviesList = (props) => {
           >
             <Box style={{ width: "10%" }}>
               <Typography style={{ color: "white" }}>
-                Selecionados {movieList.length} de 8 filmes
+                Selecionados {movieList?.length} de 8 filmes
               </Typography>
             </Box>
 
             <Box>
               <Button
                 onClick={(e) => handlePage(e)}
-                disabled={movieList.length < 8 ? true : false}
+                disabled={movieList?.length < 8 ? true : false}
                 style={{
                   backgroundColor:
-                    movieList.length < 8 ? "rgb(158, 158, 158)" : "#161616",
+                    movieList?.length < 8 ? "rgb(158, 158, 158)" : "#161616",
                   color: "white",
                 }}
               >
@@ -85,7 +85,7 @@ const MoviesList = (props) => {
             </Box>
           </Box>
           <Grid style={{ padding: "20px" }} container spacing={2} >
-            {movieArr.length === 0 ? (
+            {movieArr?.length === 0 ? (
               <Grid item xs={12}>
                 <Box style={{ display: "flex", justifyContent: "center" }}>
                   <Typography variant="h5" style={{ color: "white" }}>
@@ -97,8 +97,8 @@ const MoviesList = (props) => {
               movieArr?.map((item, index) => (
                 <Grid key={index} item xs={12} md={3} sm={4} >
                   <Movie
-                    title={item.titulo}
-                    year={item.ano}
+                    title={item?.titulo}
+                    year={item?.ano}
                     handleList={handleListSelectMovies}
                     handleDel={handleDelete}
                     movie={item}
