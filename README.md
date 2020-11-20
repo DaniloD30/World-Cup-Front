@@ -73,5 +73,5 @@ yarn/npm test
 
 # Link da Aplicação
 
-A Aplicação está disponível no Heroku atráves deste [Link](https://world-cup-movie-front.herokuapp.com/).
+A Aplicação está disponível no Heroku através  deste [Link](https://world-cup-movie-front.herokuapp.com/).
 ```
