@@ -84,7 +84,7 @@ const MoviesList = (props) => {
               </Button>
             </Box>
           </Box>
-          <Grid style={{ padding: "20px" }} container spacing={2}>
+          <Grid style={{ padding: "20px" }} container spacing={2} >
             {movieArr.length === 0 ? (
               <Grid item xs={12}>
                 <Box style={{ display: "flex", justifyContent: "center" }}>
@@ -95,7 +95,7 @@ const MoviesList = (props) => {
               </Grid>
             ) : (
               movieArr?.map((item, index) => (
-                <Grid key={index} item xs={3}>
+                <Grid key={index} item xs={12} md={3} sm={4} >
                   <Movie
                     title={item.titulo}
                     year={item.ano}
