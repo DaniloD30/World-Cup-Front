@@ -8,7 +8,7 @@ const MovieResult = (props) => {
     <>
       <Paper
         style={{
-          height: "55px",
+          // height: "55px",
           marginTop: "15px",
           display: "flex",
           alignItems: "center",
